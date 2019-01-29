@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <%= link_to "My Profile", user_path(session[:user_id]) %>
+    <%= link_to "Events", events_path %>
     <%= yield %>
   </body>
 </html>

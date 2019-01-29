@@ -1,0 +1,26 @@
+<h1>Upcoming Events</h1>
+
+<% @upcoming.each do |event| %>
+
+<h3><%= link_to event.title, event_path(event) %></h3>
+
+<p><%= event.body %></p>
+<p><%= event.date %></p>
+ 
+<%= link_to "Join Event", join_path(event) %>
+<%= link_to "Delete", event_path(event), method: :delete %>
+<hr>
+<% end %>
+
+<h1>Past Events</h1>
+
+<% @past.each do |event| %>
+<h3><%= link_to event.title, event_path(event) %></h3>
+
+<p><%= event.body %></p>
+<p><%= event.date %></p>
+ 
+<%= link_to "Join Event", join_path(event) %>
+<%= link_to "Delete", event_path(event), method: :delete %>
+<hr>
+<% end %>

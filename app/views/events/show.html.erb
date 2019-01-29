@@ -1,0 +1,11 @@
+<h1>Event Show Pages</h1>
+
+<h3><%= @event.title %></h3>
+
+<p><%= @event.creator.username %></p>
+<% if @attendees != nil %>	
+	<% @attendees.each do |peeps| %>
+		<h5>Attendees:</h5>
+		<p><%= peeps.username %></p>
+	<% end %>
+<% end %>
